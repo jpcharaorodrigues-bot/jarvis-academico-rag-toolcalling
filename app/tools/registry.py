@@ -1,4 +1,5 @@
 from app.tools.agenda_tools import consultar_agenda
+from app.tools.planning_tools import planejar_estudos
 from app.tools.rag_tools import buscar_material_rag
 from app.tools.task_tools import adicionar_tarefa, concluir_tarefa, listar_tarefas
 
@@ -8,7 +9,8 @@ TOOLS = {
     "listar_tarefas": listar_tarefas,
     "adicionar_tarefa": adicionar_tarefa,
     "concluir_tarefa": concluir_tarefa,
-    "buscar_material_rag": buscar_material_rag
+    "buscar_material_rag": buscar_material_rag,
+    "planejar_estudos": planejar_estudos
 }
 
 
@@ -47,6 +49,13 @@ TOOL_DESCRIPTIONS = [
         "description": "Buscar resposta nos materiais de estudo.",
         "parameters": {
             "pergunta": "pergunta sobre os materiais"
+        }
+    },
+    {
+        "name": "planejar_estudos",
+        "description": "Gerar plano de estudos acadêmico.",
+        "parameters": {
+            "objetivo": "objetivo do estudo"
         }
     }
 ]
