@@ -8,19 +8,16 @@ def main():
     llm = LLMClient()
 
     while True:
-        pergunta = input("Você: ")
+        pergunta = input("Você: ").strip()
 
-        if pergunta.lower().strip() in ["sair", "exit", "quit"]:
+        if pergunta.lower() in ["sair", "exit", "quit"]:
             print("Encerrando o JARVIS Acadêmico.")
             break
 
         messages = [
             {
                 "role": "system",
-                "content": (
-                    "Você é o JARVIS Acadêmico, um assistente para estudantes. "
-                    "Responda de forma clara, técnica e objetiva."
-                )
+                "content": "Você é um assistente acadêmico para apoio ao estudo."
             },
             {
                 "role": "user",

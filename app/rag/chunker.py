@@ -2,25 +2,15 @@ from typing import Dict, List
 
 
 class TextChunker:
-    """
-    Divide documentos em chunks para recuperação no RAG.
-
-    Estratégia:
-    - chunk_size: número aproximado de palavras por chunk
-    - overlap: quantidade de palavras repetidas entre chunks
-
-    O overlap reduz perda de contexto entre divisões.
-    """
-
     def __init__(self, chunk_size: int = 500, overlap: int = 50):
         if chunk_size <= 0:
-            raise ValueError("chunk_size deve ser maior que zero.")
+            raise ValueError("chunk_size inválido.")
 
         if overlap < 0:
-            raise ValueError("overlap não pode ser negativo.")
+            raise ValueError("overlap inválido.")
 
         if overlap >= chunk_size:
-            raise ValueError("overlap deve ser menor que chunk_size.")
+            raise ValueError("overlap maior que chunk_size.")
 
         self.chunk_size = chunk_size
         self.overlap = overlap
@@ -32,9 +22,7 @@ class TextChunker:
             source = document["source"]
             content = document["content"]
 
-            document_chunks = self._chunk_text(content)
-
-            for index, chunk in enumerate(document_chunks):
+            for index, chunk in enumerate(self._chunk_text(content)):
                 chunks.append({
                     "source": source,
                     "chunk_id": f"{source}_chunk_{index}",
@@ -54,9 +42,7 @@ class TextChunker:
 
         while start < len(words):
             end = start + self.chunk_size
-            chunk_words = words[start:end]
-
-            chunks.append(" ".join(chunk_words))
+            chunks.append(" ".join(words[start:end]))
 
             if end >= len(words):
                 break

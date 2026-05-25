@@ -6,10 +6,7 @@ from app.config import Config
 class LLMClient:
     def __init__(self):
         if not Config.API_KEY:
-            raise ValueError(
-                "A variável GEMMA_API_KEY não foi encontrada. "
-                "Crie um arquivo .env com GEMMA_API_KEY=sua_chave."
-            )
+            raise ValueError("GEMMA_API_KEY não encontrada no .env.")
 
         self.client = OpenAI(
             base_url=Config.BASE_URL,

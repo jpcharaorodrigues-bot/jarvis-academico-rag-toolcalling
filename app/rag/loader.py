@@ -5,23 +5,11 @@ from pypdf import PdfReader
 
 
 class DocumentLoader:
-    """
-    Responsável por carregar documentos acadêmicos usados pelo RAG.
-
-    Formatos suportados:
-    - .txt
-    - .pdf
-
-    Cada documento carregado é retornado como um dicionário contendo:
-    - source: nome do arquivo
-    - content: texto extraído
-    """
-
     def load_documents(self, documents_path: str) -> List[Dict[str, str]]:
         path = Path(documents_path)
 
         if not path.exists():
-            raise FileNotFoundError(f"Pasta de documentos não encontrada: {documents_path}")
+            raise FileNotFoundError(f"Pasta não encontrada: {documents_path}")
 
         documents = []
 
@@ -38,26 +26,20 @@ class DocumentLoader:
         return documents
 
     def _load_txt(self, file: Path) -> Dict[str, str]:
-        content = file.read_text(
-            encoding="utf-8",
-            errors="ignore"
-        )
-
         return {
             "source": file.name,
-            "content": content
+            "content": file.read_text(encoding="utf-8", errors="ignore")
         }
 
     def _load_pdf(self, file: Path) -> Dict[str, str]:
         text = ""
-
         reader = PdfReader(str(file))
 
         for page in reader.pages:
-            extracted_text = page.extract_text()
+            extracted = page.extract_text()
 
-            if extracted_text:
-                text += extracted_text + "\n"
+            if extracted:
+                text += extracted + "\n"
 
         return {
             "source": file.name,
