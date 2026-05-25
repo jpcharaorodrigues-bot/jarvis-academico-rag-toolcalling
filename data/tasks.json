@@ -1,0 +1,14 @@
+[
+  {
+    "id": "tarefa-inicial-1",
+    "descricao": "Revisar materiais de RAG",
+    "prazo": "2026-05-25",
+    "concluida": false
+  },
+  {
+    "id": "tarefa-inicial-2",
+    "descricao": "Testar ferramentas do Jarvis Acadêmico",
+    "prazo": "2026-05-26",
+    "concluida": false
+  }
+]
