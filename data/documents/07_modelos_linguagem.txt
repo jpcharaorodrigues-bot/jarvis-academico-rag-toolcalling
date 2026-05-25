@@ -1,0 +1,19 @@
+Modelos de linguagem são sistemas treinados para prever sequências textuais com base em grandes volumes de dados. Esses modelos aprendem padrões linguísticos, relações contextuais e estruturas semânticas capazes de gerar respostas coerentes para diferentes tarefas relacionadas a linguagem natural.
+
+Modelos modernos normalmente utilizam arquiteturas baseadas em transformers. Durante treinamento, o sistema processa grandes quantidades de texto e ajusta parâmetros internos para reduzir erro de previsão entre tokens esperados e tokens gerados.
+
+Large Language Models, também chamados de LLMs, possuem grande quantidade de parâmetros treináveis e conseguem executar tarefas como resumo, tradução, classificação textual, geração de conteúdo, explicação de conceitos e resposta a perguntas.
+
+A geração textual ocorre token por token. O modelo utiliza contexto disponível para estimar probabilidades das próximas palavras da sequência. A escolha dos tokens pode variar de acordo com parâmetros utilizados durante inferência, incluindo temperatura e estratégias de amostragem.
+
+LLMs também podem utilizar contexto externo durante geração. Em sistemas RAG, documentos recuperados são enviados juntamente com a pergunta do usuário. Isso permite que o modelo produza respostas mais alinhadas aos materiais disponíveis na base documental.
+
+Modelos de linguagem são amplamente utilizados em sistemas conversacionais, assistentes virtuais, recuperação de informação, análise textual e aplicações acadêmicas. Em ambientes educacionais, podem auxiliar estudantes na revisão de conteúdos, explicação de conceitos e geração de exercícios.
+
+Apesar das capacidades avançadas, LLMs possuem limitações importantes. O modelo pode gerar respostas incorretas, informações inexistentes ou interpretações ambíguas. Esse comportamento é frequentemente chamado de alucinação.
+
+A utilização de contexto externo e logs de execução ajuda a reduzir problemas de rastreabilidade. Sistemas acadêmicos normalmente combinam LLMs com recuperação documental para melhorar precisão das respostas e permitir verificação do conteúdo utilizado durante geração.
+
+O desempenho de um modelo de linguagem depende da qualidade do treinamento, tamanho do contexto disponível e adequação da arquitetura para a tarefa proposta. Diferentes modelos podem apresentar resultados distintos dependendo do domínio da aplicação.
+
+A avaliação de modelos de linguagem normalmente considera coerência textual, precisão factual, relevância contextual e capacidade de responder corretamente solicitações realizadas pelos usuários.

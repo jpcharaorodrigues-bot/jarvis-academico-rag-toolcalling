@@ -1,0 +1,19 @@
+Chunking é o processo de dividir documentos em partes menores para facilitar processamento, indexação e recuperação de informação. Em sistemas RAG, chunking é utilizado para transformar documentos extensos em unidades menores capazes de serem convertidas em embeddings vetoriais.
+
+A divisão em chunks é necessária porque modelos de embedding e modelos de linguagem possuem limitações práticas relacionadas a tamanho de contexto, desempenho e custo computacional. Trabalhar com documentos completos pode reduzir eficiência da recuperação e aumentar presença de informações irrelevantes durante geração de respostas.
+
+O tamanho dos chunks influencia diretamente qualidade do sistema. Chunks muito pequenos podem remover contexto importante e dificultar compreensão semântica do conteúdo recuperado. Chunks muito grandes podem misturar tópicos diferentes e reduzir precisão da busca vetorial.
+
+Em muitos sistemas, utiliza-se overlap entre chunks consecutivos. O overlap representa uma região compartilhada entre partes vizinhas do documento. Essa técnica ajuda a preservar continuidade semântica e reduzir perda de contexto causada pela divisão do texto.
+
+A estratégia de chunking deve considerar tipo do documento e objetivo do sistema. Materiais acadêmicos normalmente exigem preservação contextual maior do que documentos curtos ou textos altamente estruturados. Em conteúdos técnicos, divisões inadequadas podem separar definições, exemplos e explicações complementares.
+
+Durante indexação, cada chunk é convertido em embedding vetorial e armazenado em índice especializado. Na etapa de recuperação, a consulta do usuário é comparada com embeddings dos chunks disponíveis. O sistema recupera apenas trechos semanticamente mais relevantes para responder à pergunta realizada.
+
+Chunking também influencia desempenho computacional. Quantidade excessiva de chunks aumenta custo de armazenamento e tempo de recuperação. Quantidade insuficiente pode reduzir granularidade semântica da busca. O objetivo é equilibrar contexto, precisão e eficiência.
+
+Sistemas modernos podem utilizar estratégias diferentes de chunking, incluindo divisão por número de palavras, caracteres, sentenças, parágrafos ou estrutura semântica. Em aplicações acadêmicas, chunking baseado em parágrafos normalmente preserva melhor coerência do conteúdo.
+
+A avaliação de estratégias de chunking considera qualidade dos documentos recuperados, relevância contextual e impacto sobre respostas geradas pela LLM. Ajustes de tamanho e overlap normalmente são realizados empiricamente durante desenvolvimento do sistema.
+
+Chunking é uma etapa central em sistemas RAG porque influencia diretamente embeddings, recuperação vetorial e geração final de respostas contextualizadas.

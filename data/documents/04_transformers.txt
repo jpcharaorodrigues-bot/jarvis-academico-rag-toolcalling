@@ -1,0 +1,19 @@
+Transformers são arquiteturas de redes neurais utilizadas em processamento de linguagem natural e outras tarefas relacionadas a aprendizado profundo. Essa arquitetura foi introduzida para melhorar capacidade de processamento sequencial e reduzir limitações existentes em modelos recorrentes tradicionais.
+
+O principal componente dos transformers é o mecanismo de atenção. A atenção permite que o modelo identifique quais partes da entrada possuem maior relevância durante o processamento de uma informação. Em vez de analisar tokens apenas sequencialmente, o modelo consegue relacionar diferentes partes do texto simultaneamente.
+
+O mecanismo de self-attention é responsável por calcular relações entre palavras presentes em uma sequência. Isso permite capturar dependências contextuais longas e melhorar compreensão semântica de frases complexas. A representação final de cada token depende não apenas dele próprio, mas também das relações estabelecidas com os demais elementos da entrada.
+
+Transformers são amplamente utilizados em modelos de linguagem de grande porte. Sistemas modernos de geração textual, recuperação semântica e embeddings normalmente utilizam arquiteturas derivadas de transformers para representar linguagem natural.
+
+A arquitetura tradicional possui componentes de encoder e decoder. O encoder é responsável por gerar representações contextuais da entrada. O decoder utiliza essas representações para produzir saídas sequenciais. Em modelos de linguagem modernos, diferentes adaptações dessa estrutura são utilizadas dependendo da tarefa desejada.
+
+Outra característica importante é o uso de positional encoding. Como transformers processam tokens em paralelo, é necessário inserir informação posicional para preservar ordem da sequência textual. Sem isso, o modelo não conseguiria distinguir adequadamente estrutura e contexto das frases.
+
+Transformers também permitiram avanços significativos em paralelização computacional. Diferentemente de redes recorrentes, o processamento pode ocorrer simultaneamente para diferentes partes da entrada, melhorando desempenho durante treinamento e inferência.
+
+Em sistemas RAG, transformers podem ser utilizados tanto para geração de embeddings quanto para geração de respostas. Modelos de embedding baseados em transformers conseguem representar relações semânticas complexas entre documentos e perguntas realizadas pelos usuários.
+
+Apesar das vantagens, transformers possuem limitações relacionadas a custo computacional e tamanho de contexto. Modelos muito grandes exigem grande quantidade de memória e processamento. Além disso, entradas extensas podem aumentar significativamente custo de inferência.
+
+Atualmente, transformers são utilizados em tradução automática, classificação textual, sistemas conversacionais, recomendação, recuperação semântica, geração de código e aplicações acadêmicas baseadas em inteligência artificial.

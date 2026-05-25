@@ -1,0 +1,17 @@
+Retrieval-Augmented Generation (RAG) é uma abordagem utilizada para combinar recuperação de informação com geração de texto por modelos de linguagem. O objetivo principal é permitir que a resposta da LLM utilize documentos externos como contexto, reduzindo respostas incorretas e aumentando a rastreabilidade da informação utilizada durante a geração.
+
+O funcionamento de um sistema RAG normalmente ocorre em etapas. Primeiro, os documentos disponíveis são carregados pelo sistema. Esses documentos podem incluir PDFs, textos acadêmicos, anotações, apostilas ou artigos técnicos. Após o carregamento, o conteúdo é dividido em partes menores chamadas chunks. O chunking é necessário porque modelos de embedding e recuperação possuem limites práticos de contexto e desempenho.
+
+A estratégia de chunking influencia diretamente a qualidade do sistema. Chunks muito pequenos podem remover contexto importante. Chunks muito grandes podem introduzir informação irrelevante durante a recuperação. Em muitos sistemas, utiliza-se overlap entre chunks consecutivos para preservar continuidade semântica.
+
+Depois do chunking, cada trecho é convertido em embedding vetorial. Embeddings são representações numéricas capazes de preservar similaridade semântica entre textos. Trechos semanticamente parecidos possuem vetores próximos em espaço vetorial.
+
+Durante uma consulta, a pergunta do usuário também é convertida em embedding. O sistema compara esse vetor com os embeddings armazenados dos documentos. Os trechos mais relevantes são recuperados utilizando métricas de similaridade vetorial, como similaridade do cosseno ou produto interno.
+
+Os documentos recuperados são então enviados para a LLM como contexto adicional. O modelo utiliza essas informações para gerar uma resposta mais alinhada ao conteúdo disponível na base documental. Isso reduz alucinações e melhora a consistência da resposta final.
+
+Sistemas RAG são utilizados em aplicações acadêmicas, assistentes corporativos, busca semântica, sistemas jurídicos e recuperação de documentação técnica. Em ambientes acadêmicos, permitem consulta a materiais de estudo, geração de resumos, apoio ao aprendizado e recuperação contextual de conceitos específicos.
+
+Apesar das vantagens, sistemas RAG possuem limitações. A recuperação pode falhar quando os embeddings não representam corretamente o significado do texto. Chunking inadequado também pode prejudicar resultados. Além disso, a LLM ainda pode gerar respostas parcialmente incorretas mesmo utilizando contexto relevante.
+
+A avaliação de sistemas RAG normalmente considera qualidade dos documentos recuperados, relevância semântica, precisão da resposta gerada e capacidade de justificar a informação utilizada. Técnicas adicionais podem ser utilizadas para melhorar desempenho, incluindo reranking, expansão de consulta e memória conversacional.

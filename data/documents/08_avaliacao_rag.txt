@@ -1,0 +1,19 @@
+A avaliação de sistemas RAG é uma etapa importante para verificar qualidade da recuperação documental e consistência das respostas geradas pela LLM. O objetivo principal é identificar se o sistema consegue localizar trechos relevantes e produzir respostas corretas para perguntas realizadas pelos usuários.
+
+A avaliação normalmente considera diferentes componentes do pipeline. Entre eles estão recuperação vetorial, qualidade dos embeddings, estratégia de chunking, relevância dos documentos encontrados e coerência da resposta final gerada pelo modelo de linguagem.
+
+Em sistemas acadêmicos, a avaliação pode utilizar conjuntos de perguntas relacionadas aos documentos disponíveis na base. Para cada pergunta, analisa-se quais trechos foram recuperados, quais informações foram utilizadas e se a resposta produzida corresponde corretamente ao conteúdo existente nos materiais.
+
+Muitos sistemas classificam respostas em categorias como correta, parcialmente correta ou incorreta. Essa classificação permite medir qualidade geral do sistema e identificar padrões de falha recorrentes durante recuperação e geração textual.
+
+A recuperação vetorial influencia diretamente desempenho do sistema. Quando documentos irrelevantes são recuperados, a LLM pode gerar respostas incorretas mesmo funcionando adequadamente. Por esse motivo, avaliação de retrieval é considerada uma etapa central em aplicações RAG.
+
+Chunking inadequado também pode prejudicar desempenho. Chunks muito pequenos podem remover contexto importante. Chunks muito grandes podem introduzir excesso de informação irrelevante durante geração. Ajustes de tamanho e overlap costumam impactar significativamente qualidade da recuperação.
+
+A análise de erros normalmente identifica diferentes tipos de falha. Entre os exemplos mais comuns estão recuperação incorreta, ausência de contexto relevante, ambiguidade na pergunta, interpretação inadequada da LLM e inconsistência semântica entre documentos recuperados.
+
+Em aplicações acadêmicas, logs ajudam a rastrear comportamento do sistema durante execução. O registro das ferramentas utilizadas, entradas recebidas e respostas geradas facilita identificação de problemas e revisão do pipeline implementado.
+
+A avaliação também pode considerar experiência do usuário, clareza das respostas, precisão conceitual e capacidade do sistema em justificar informações utilizadas durante geração textual.
+
+Sistemas RAG mais robustos frequentemente utilizam reranking, expansão de consulta e filtros adicionais para melhorar qualidade dos documentos recuperados. A melhoria contínua depende da análise sistemática dos erros encontrados durante utilização do sistema.

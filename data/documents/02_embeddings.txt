@@ -1,0 +1,19 @@
+Embeddings são representações vetoriais utilizadas para converter informações em estruturas numéricas capazes de preservar significado semântico. Em processamento de linguagem natural, palavras, frases ou documentos são transformados em vetores de números reais que podem ser comparados matematicamente.
+
+Modelos de embedding são treinados para aproximar semanticamente conteúdos semelhantes dentro do espaço vetorial. Dessa forma, frases com significado parecido tendem a produzir vetores próximos, mesmo quando utilizam palavras diferentes. Essa propriedade permite construir sistemas de busca semântica mais eficientes do que abordagens baseadas apenas em palavras-chave.
+
+Em sistemas tradicionais de busca textual, a recuperação depende principalmente da ocorrência exata de termos. Em contraste, embeddings permitem recuperar contexto semântico. Isso possibilita localizar documentos relacionados ao significado da consulta, mesmo quando não existe correspondência literal entre as palavras utilizadas.
+
+Embeddings são amplamente utilizados em sistemas RAG. Durante a indexação, os documentos são divididos em chunks e convertidos em vetores. Esses vetores são armazenados em bancos vetoriais ou índices especializados. Durante a consulta, a pergunta do usuário também é convertida em embedding e comparada com os vetores existentes.
+
+A comparação normalmente utiliza métricas como similaridade do cosseno, distância euclidiana ou produto interno. O objetivo é identificar quais chunks possuem maior proximidade semântica com a pergunta realizada pelo usuário.
+
+Modelos modernos de embedding são treinados utilizando grandes volumes de texto. Muitos utilizam arquiteturas baseadas em transformers. Esses modelos conseguem representar relações semânticas complexas, incluindo contexto, associação temática e proximidade conceitual.
+
+A qualidade dos embeddings influencia diretamente a eficiência de sistemas RAG. Representações vetoriais inadequadas podem recuperar documentos irrelevantes ou deixar de recuperar trechos importantes. Por esse motivo, a escolha do modelo de embedding é uma etapa importante no desenvolvimento de sistemas de recuperação semântica.
+
+Embeddings também são utilizados em recomendação, classificação textual, agrupamento de documentos, detecção de similaridade e sistemas conversacionais. Em aplicações acadêmicas, podem auxiliar estudantes na recuperação de conteúdos relacionados, organização de materiais e revisão contextual de conceitos.
+
+Apesar das vantagens, embeddings possuem limitações. Informações ambíguas, textos muito curtos ou contexto insuficiente podem reduzir a qualidade da representação vetorial. Além disso, diferentes modelos podem produzir resultados distintos dependendo do domínio do texto utilizado.
+
+A avaliação de embeddings normalmente considera precisão da recuperação, relevância dos documentos encontrados e capacidade de representar corretamente relações semânticas entre conteúdos distintos.

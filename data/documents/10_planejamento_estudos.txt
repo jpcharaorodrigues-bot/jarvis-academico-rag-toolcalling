@@ -1,0 +1,19 @@
+Planejamento de estudos é o processo de organizar atividades acadêmicas de forma estruturada para melhorar aprendizagem, gerenciamento de tempo e acompanhamento de objetivos educacionais. Em sistemas acadêmicos baseados em inteligência artificial, o planejamento pode considerar agenda, tarefas pendentes, materiais disponíveis e dificuldades identificadas durante estudo.
+
+A organização adequada do estudo ajuda estudantes a distribuir carga de trabalho ao longo do tempo, reduzindo acúmulo de atividades e melhorando revisão contínua dos conteúdos. O planejamento também auxilia definição de prioridades acadêmicas de acordo com provas, trabalhos e tópicos com maior dificuldade.
+
+Sistemas inteligentes podem utilizar informações da agenda acadêmica para identificar períodos disponíveis para estudo. A integração com listas de tarefas permite reconhecer atividades pendentes, prazos próximos e demandas prioritárias.
+
+Materiais acadêmicos indexados em sistemas RAG podem ser utilizados para recomendar conteúdos relacionados aos temas mais importantes no momento. Isso permite construir planos de estudo contextualizados e alinhados às necessidades do estudante.
+
+A combinação entre recuperação documental e geração textual permite que a LLM produza recomendações personalizadas de revisão, divisão de tempo e sequência de estudo. O sistema pode sugerir tópicos prioritários, horários de revisão e exercícios complementares.
+
+Em aplicações acadêmicas, planejamento automatizado também pode considerar desempenho anterior do estudante. Tópicos identificados como difíceis podem receber maior prioridade durante organização das atividades futuras.
+
+O uso de planejamento inteligente não substitui autonomia do estudante, mas funciona como ferramenta de apoio para organização e tomada de decisão. O objetivo principal é melhorar consistência do estudo e facilitar acompanhamento das atividades acadêmicas.
+
+Sistemas mais avançados podem adaptar recomendações dinamicamente conforme novas tarefas são adicionadas ou conforme desempenho do estudante muda durante utilização da plataforma.
+
+Apesar das vantagens, planejamento automatizado possui limitações. Recomendações excessivamente rígidas podem não refletir rotina real do usuário. Além disso, qualidade das sugestões depende da qualidade dos dados disponíveis sobre agenda, tarefas e materiais acadêmicos.
+
+A integração entre planejamento, recuperação documental e avaliação contínua permite construir assistentes acadêmicos mais úteis para apoio ao aprendizado e organização pessoal do estudante.
