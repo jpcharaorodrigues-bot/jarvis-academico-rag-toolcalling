@@ -1,0 +1,10 @@
+openai
+python-dotenv
+sentence-transformers
+faiss-cpu
+pypdf
+numpy
+pandas
+scikit-learn
+rich
+tqdm

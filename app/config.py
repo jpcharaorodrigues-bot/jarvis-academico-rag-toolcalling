@@ -1,0 +1,21 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+class Config:
+    MODEL_NAME = "google/gemma-3-12b-it"
+    BASE_URL = "https://llm.liaufms.org/v1/gemma-3-12b-it"
+    API_KEY = os.getenv("GEMMA_API_KEY")
+
+    DATA_PATH = "data"
+    AGENDA_PATH = "data/agenda.json"
+    TASKS_PATH = "data/tasks.json"
+    LOGS_PATH = "data/logs.jsonl"
+    DOCUMENTS_PATH = "data/documents"
+    VECTOR_STORE_PATH = "data/vector_store"
+
+    CHUNK_SIZE = 500
+    CHUNK_OVERLAP = 50
+    MAX_CONTEXT_DOCUMENTS = 5
