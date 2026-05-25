@@ -1,11 +1,11 @@
-from app.llm_client import LLMClient
+from app.orchestrator import Orchestrator
 
 
 def main():
     print("JARVIS Acadêmico iniciado.")
     print("Digite 'sair' para encerrar.\n")
 
-    llm = LLMClient()
+    orchestrator = Orchestrator()
 
     while True:
         pergunta = input("Você: ").strip()
@@ -14,18 +14,7 @@ def main():
             print("Encerrando o JARVIS Acadêmico.")
             break
 
-        messages = [
-            {
-                "role": "system",
-                "content": "Você é um assistente acadêmico para apoio ao estudo."
-            },
-            {
-                "role": "user",
-                "content": pergunta
-            }
-        ]
-
-        resposta = llm.generate(messages)
+        resposta = orchestrator.handle(pergunta)
 
         print("\nJARVIS:")
         print(resposta)
