@@ -68,7 +68,7 @@ def concluir_tarefa(task_id: str):
             break
 
     if encontrada is None:
-        raise ValueError("Tarefa não encontrada.")
+        raise ValueError("Tarefa nao encontrada.")
 
     _save_tasks(tasks)
 

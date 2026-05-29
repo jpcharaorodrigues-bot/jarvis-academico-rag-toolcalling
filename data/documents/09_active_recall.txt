@@ -1,19 +1,19 @@
-Active recall é uma técnica de aprendizagem baseada na recuperação ativa de informações da memória. Em vez de apenas reler materiais, o estudante tenta responder perguntas, explicar conceitos ou reconstruir conteúdos utilizando o próprio conhecimento previamente adquirido.
+Active recall Ã© uma tÃ©cnica de aprendizagem baseada na recuperaÃ§Ã£o ativa de informaÃ§Ãµes da memÃ³ria. Em vez de apenas reler materiais, o estudante tenta responder perguntas, explicar conceitos ou reconstruir conteÃºdos utilizando o prÃ³prio conhecimento previamente adquirido.
 
-A recuperação ativa fortalece consolidação da memória e melhora retenção de longo prazo. Estudos em aprendizagem mostram que testar conhecimento frequentemente produz melhores resultados do que apenas exposição passiva ao conteúdo.
+A recuperaÃ§Ã£o ativa fortalece consolidaÃ§Ã£o da memÃ³ria e melhora retenÃ§Ã£o de longo prazo. Estudos em aprendizagem mostram que testar conhecimento frequentemente produz melhores resultados do que apenas exposiÃ§Ã£o passiva ao conteÃºdo.
 
-Sistemas acadêmicos baseados em inteligência artificial podem utilizar active recall para gerar perguntas automaticamente a partir dos materiais disponíveis. O sistema pode solicitar respostas do estudante, avaliar desempenho e identificar tópicos com maior dificuldade.
+Sistemas acadÃªmicos baseados em inteligÃªncia artificial podem utilizar active recall para gerar perguntas automaticamente a partir dos materiais disponÃ­veis. O sistema pode solicitar respostas do estudante, avaliar desempenho e identificar tÃ³picos com maior dificuldade.
 
-Em ambientes educacionais, perguntas de revisão ajudam a detectar lacunas de conhecimento. Quando o estudante apresenta respostas incompletas ou incorretas, o sistema pode recomendar revisão específica dos materiais relacionados ao tema avaliado.
+Em ambientes educacionais, perguntas de revisÃ£o ajudam a detectar lacunas de conhecimento. Quando o estudante apresenta respostas incompletas ou incorretas, o sistema pode recomendar revisÃ£o especÃ­fica dos materiais relacionados ao tema avaliado.
 
-A utilização de active recall também melhora engajamento durante estudo. O estudante participa ativamente do processo de aprendizagem em vez de apenas consumir informações de maneira passiva. Isso favorece construção de compreensão mais profunda dos conceitos estudados.
+A utilizaÃ§Ã£o de active recall tambÃ©m melhora engajamento durante estudo. O estudante participa ativamente do processo de aprendizagem em vez de apenas consumir informaÃ§Ãµes de maneira passiva. Isso favorece construÃ§Ã£o de compreensÃ£o mais profunda dos conceitos estudados.
 
-Em sistemas integrados com RAG, perguntas podem ser geradas utilizando materiais acadêmicos indexados previamente. O modelo recupera trechos relevantes e utiliza essas informações como contexto para construir exercícios contextualizados.
+Em sistemas integrados com RAG, perguntas podem ser geradas utilizando materiais acadÃªmicos indexados previamente. O modelo recupera trechos relevantes e utiliza essas informaÃ§Ãµes como contexto para construir exercÃ­cios contextualizados.
 
-A avaliação das respostas pode considerar precisão conceitual, coerência textual e alinhamento com o conteúdo disponível nos materiais. Classificações como correta, parcialmente correta ou incorreta ajudam a medir desempenho do estudante.
+A avaliaÃ§Ã£o das respostas pode considerar precisÃ£o conceitual, coerÃªncia textual e alinhamento com o conteÃºdo disponÃ­vel nos materiais. ClassificaÃ§Ãµes como correta, parcialmente correta ou incorreta ajudam a medir desempenho do estudante.
 
-Sistemas mais avançados podem registrar dificuldades recorrentes e adaptar futuras recomendações de estudo. Esse processo permite personalizar revisão de acordo com desempenho individual do usuário.
+Sistemas mais avanÃ§ados podem registrar dificuldades recorrentes e adaptar futuras recomendaÃ§Ãµes de estudo. Esse processo permite personalizar revisÃ£o de acordo com desempenho individual do usuÃ¡rio.
 
-Apesar das vantagens, active recall também possui desafios. Perguntas muito genéricas podem dificultar avaliação adequada. Respostas abertas podem apresentar múltiplas interpretações válidas, exigindo critérios mais flexíveis de análise.
+Apesar das vantagens, active recall tambÃ©m possui desafios. Perguntas muito genÃ©ricas podem dificultar avaliaÃ§Ã£o adequada. Respostas abertas podem apresentar mÃºltiplas interpretaÃ§Ãµes vÃ¡lidas, exigindo critÃ©rios mais flexÃ­veis de anÃ¡lise.
 
-A combinação entre recuperação documental, geração de perguntas e avaliação automática permite construir assistentes acadêmicos capazes de apoiar estudo contínuo e revisão contextual de conteúdos específicos.
+A combinaÃ§Ã£o entre recuperaÃ§Ã£o documental, geraÃ§Ã£o de perguntas e avaliaÃ§Ã£o automÃ¡tica permite construir assistentes acadÃªmicos capazes de apoiar estudo contÃ­nuo e revisÃ£o contextual de conteÃºdos especÃ­ficos.

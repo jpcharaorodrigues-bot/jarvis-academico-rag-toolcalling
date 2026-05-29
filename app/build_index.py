@@ -4,7 +4,7 @@ from app.rag.indexer import RagIndexer
 def main():
     result = RagIndexer().build()
 
-    print("Índice RAG criado.")
+    print("Indice RAG criado.")
     print(f"Documentos: {result['documents']}")
     print(f"Chunks: {result['chunks']}")
 

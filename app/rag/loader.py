@@ -9,7 +9,7 @@ class DocumentLoader:
         path = Path(documents_path)
 
         if not path.exists():
-            raise FileNotFoundError(f"Pasta não encontrada: {documents_path}")
+            raise FileNotFoundError(f"Pasta nao encontrada: {documents_path}")
 
         documents = []
 

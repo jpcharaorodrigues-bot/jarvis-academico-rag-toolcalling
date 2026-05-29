@@ -8,7 +8,7 @@ def gerar_exercicios(tema: str, quantidade: int = 3):
     messages = [
         {
             "role": "system",
-            "content": "Gerar exercícios curtos com gabarito, usando apenas o material informado."
+            "content": "Gerar exercicios curtos com gabarito, usando apenas o material informado."
         },
         {
             "role": "user",

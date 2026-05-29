@@ -1,19 +1,19 @@
-Modelos de linguagem são sistemas treinados para prever sequências textuais com base em grandes volumes de dados. Esses modelos aprendem padrões linguísticos, relações contextuais e estruturas semânticas capazes de gerar respostas coerentes para diferentes tarefas relacionadas a linguagem natural.
+Modelos de linguagem sÃ£o sistemas treinados para prever sequÃªncias textuais com base em grandes volumes de dados. Esses modelos aprendem padrÃµes linguÃ­sticos, relaÃ§Ãµes contextuais e estruturas semÃ¢nticas capazes de gerar respostas coerentes para diferentes tarefas relacionadas a linguagem natural.
 
-Modelos modernos normalmente utilizam arquiteturas baseadas em transformers. Durante treinamento, o sistema processa grandes quantidades de texto e ajusta parâmetros internos para reduzir erro de previsão entre tokens esperados e tokens gerados.
+Modelos modernos normalmente utilizam arquiteturas baseadas em transformers. Durante treinamento, o sistema processa grandes quantidades de texto e ajusta parÃ¢metros internos para reduzir erro de previsÃ£o entre tokens esperados e tokens gerados.
 
-Large Language Models, também chamados de LLMs, possuem grande quantidade de parâmetros treináveis e conseguem executar tarefas como resumo, tradução, classificação textual, geração de conteúdo, explicação de conceitos e resposta a perguntas.
+Large Language Models, tambÃ©m chamados de LLMs, possuem grande quantidade de parÃ¢metros treinÃ¡veis e conseguem executar tarefas como resumo, traduÃ§Ã£o, classificaÃ§Ã£o textual, geraÃ§Ã£o de conteÃºdo, explicaÃ§Ã£o de conceitos e resposta a perguntas.
 
-A geração textual ocorre token por token. O modelo utiliza contexto disponível para estimar probabilidades das próximas palavras da sequência. A escolha dos tokens pode variar de acordo com parâmetros utilizados durante inferência, incluindo temperatura e estratégias de amostragem.
+A geraÃ§Ã£o textual ocorre token por token. O modelo utiliza contexto disponÃ­vel para estimar probabilidades das prÃ³ximas palavras da sequÃªncia. A escolha dos tokens pode variar de acordo com parÃ¢metros utilizados durante inferÃªncia, incluindo temperatura e estratÃ©gias de amostragem.
 
-LLMs também podem utilizar contexto externo durante geração. Em sistemas RAG, documentos recuperados são enviados juntamente com a pergunta do usuário. Isso permite que o modelo produza respostas mais alinhadas aos materiais disponíveis na base documental.
+LLMs tambÃ©m podem utilizar contexto externo durante geraÃ§Ã£o. Em sistemas RAG, documentos recuperados sÃ£o enviados juntamente com a pergunta do usuÃ¡rio. Isso permite que o modelo produza respostas mais alinhadas aos materiais disponÃ­veis na base documental.
 
-Modelos de linguagem são amplamente utilizados em sistemas conversacionais, assistentes virtuais, recuperação de informação, análise textual e aplicações acadêmicas. Em ambientes educacionais, podem auxiliar estudantes na revisão de conteúdos, explicação de conceitos e geração de exercícios.
+Modelos de linguagem sÃ£o amplamente utilizados em sistemas conversacionais, assistentes virtuais, recuperaÃ§Ã£o de informaÃ§Ã£o, anÃ¡lise textual e aplicaÃ§Ãµes acadÃªmicas. Em ambientes educacionais, podem auxiliar estudantes na revisÃ£o de conteÃºdos, explicaÃ§Ã£o de conceitos e geraÃ§Ã£o de exercÃ­cios.
 
-Apesar das capacidades avançadas, LLMs possuem limitações importantes. O modelo pode gerar respostas incorretas, informações inexistentes ou interpretações ambíguas. Esse comportamento é frequentemente chamado de alucinação.
+Apesar das capacidades avanÃ§adas, LLMs possuem limitaÃ§Ãµes importantes. O modelo pode gerar respostas incorretas, informaÃ§Ãµes inexistentes ou interpretaÃ§Ãµes ambÃ­guas. Esse comportamento Ã© frequentemente chamado de alucinaÃ§Ã£o.
 
-A utilização de contexto externo e logs de execução ajuda a reduzir problemas de rastreabilidade. Sistemas acadêmicos normalmente combinam LLMs com recuperação documental para melhorar precisão das respostas e permitir verificação do conteúdo utilizado durante geração.
+A utilizaÃ§Ã£o de contexto externo e logs de execuÃ§Ã£o ajuda a reduzir problemas de rastreabilidade. Sistemas acadÃªmicos normalmente combinam LLMs com recuperaÃ§Ã£o documental para melhorar precisÃ£o das respostas e permitir verificaÃ§Ã£o do conteÃºdo utilizado durante geraÃ§Ã£o.
 
-O desempenho de um modelo de linguagem depende da qualidade do treinamento, tamanho do contexto disponível e adequação da arquitetura para a tarefa proposta. Diferentes modelos podem apresentar resultados distintos dependendo do domínio da aplicação.
+O desempenho de um modelo de linguagem depende da qualidade do treinamento, tamanho do contexto disponÃ­vel e adequaÃ§Ã£o da arquitetura para a tarefa proposta. Diferentes modelos podem apresentar resultados distintos dependendo do domÃ­nio da aplicaÃ§Ã£o.
 
-A avaliação de modelos de linguagem normalmente considera coerência textual, precisão factual, relevância contextual e capacidade de responder corretamente solicitações realizadas pelos usuários.
+A avaliaÃ§Ã£o de modelos de linguagem normalmente considera coerÃªncia textual, precisÃ£o factual, relevÃ¢ncia contextual e capacidade de responder corretamente solicitaÃ§Ãµes realizadas pelos usuÃ¡rios.

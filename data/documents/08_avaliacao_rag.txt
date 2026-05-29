@@ -1,19 +1,19 @@
-A avaliação de sistemas RAG é uma etapa importante para verificar qualidade da recuperação documental e consistência das respostas geradas pela LLM. O objetivo principal é identificar se o sistema consegue localizar trechos relevantes e produzir respostas corretas para perguntas realizadas pelos usuários.
+A avaliaÃ§Ã£o de sistemas RAG Ã© uma etapa importante para verificar qualidade da recuperaÃ§Ã£o documental e consistÃªncia das respostas geradas pela LLM. O objetivo principal Ã© identificar se o sistema consegue localizar trechos relevantes e produzir respostas corretas para perguntas realizadas pelos usuÃ¡rios.
 
-A avaliação normalmente considera diferentes componentes do pipeline. Entre eles estão recuperação vetorial, qualidade dos embeddings, estratégia de chunking, relevância dos documentos encontrados e coerência da resposta final gerada pelo modelo de linguagem.
+A avaliaÃ§Ã£o normalmente considera diferentes componentes do pipeline. Entre eles estÃ£o recuperaÃ§Ã£o vetorial, qualidade dos embeddings, estratÃ©gia de chunking, relevÃ¢ncia dos documentos encontrados e coerÃªncia da resposta final gerada pelo modelo de linguagem.
 
-Em sistemas acadêmicos, a avaliação pode utilizar conjuntos de perguntas relacionadas aos documentos disponíveis na base. Para cada pergunta, analisa-se quais trechos foram recuperados, quais informações foram utilizadas e se a resposta produzida corresponde corretamente ao conteúdo existente nos materiais.
+Em sistemas acadÃªmicos, a avaliaÃ§Ã£o pode utilizar conjuntos de perguntas relacionadas aos documentos disponÃ­veis na base. Para cada pergunta, analisa-se quais trechos foram recuperados, quais informaÃ§Ãµes foram utilizadas e se a resposta produzida corresponde corretamente ao conteÃºdo existente nos materiais.
 
-Muitos sistemas classificam respostas em categorias como correta, parcialmente correta ou incorreta. Essa classificação permite medir qualidade geral do sistema e identificar padrões de falha recorrentes durante recuperação e geração textual.
+Muitos sistemas classificam respostas em categorias como correta, parcialmente correta ou incorreta. Essa classificaÃ§Ã£o permite medir qualidade geral do sistema e identificar padrÃµes de falha recorrentes durante recuperaÃ§Ã£o e geraÃ§Ã£o textual.
 
-A recuperação vetorial influencia diretamente desempenho do sistema. Quando documentos irrelevantes são recuperados, a LLM pode gerar respostas incorretas mesmo funcionando adequadamente. Por esse motivo, avaliação de retrieval é considerada uma etapa central em aplicações RAG.
+A recuperaÃ§Ã£o vetorial influencia diretamente desempenho do sistema. Quando documentos irrelevantes sÃ£o recuperados, a LLM pode gerar respostas incorretas mesmo funcionando adequadamente. Por esse motivo, avaliaÃ§Ã£o de retrieval Ã© considerada uma etapa central em aplicaÃ§Ãµes RAG.
 
-Chunking inadequado também pode prejudicar desempenho. Chunks muito pequenos podem remover contexto importante. Chunks muito grandes podem introduzir excesso de informação irrelevante durante geração. Ajustes de tamanho e overlap costumam impactar significativamente qualidade da recuperação.
+Chunking inadequado tambÃ©m pode prejudicar desempenho. Chunks muito pequenos podem remover contexto importante. Chunks muito grandes podem introduzir excesso de informaÃ§Ã£o irrelevante durante geraÃ§Ã£o. Ajustes de tamanho e overlap costumam impactar significativamente qualidade da recuperaÃ§Ã£o.
 
-A análise de erros normalmente identifica diferentes tipos de falha. Entre os exemplos mais comuns estão recuperação incorreta, ausência de contexto relevante, ambiguidade na pergunta, interpretação inadequada da LLM e inconsistência semântica entre documentos recuperados.
+A anÃ¡lise de erros normalmente identifica diferentes tipos de falha. Entre os exemplos mais comuns estÃ£o recuperaÃ§Ã£o incorreta, ausÃªncia de contexto relevante, ambiguidade na pergunta, interpretaÃ§Ã£o inadequada da LLM e inconsistÃªncia semÃ¢ntica entre documentos recuperados.
 
-Em aplicações acadêmicas, logs ajudam a rastrear comportamento do sistema durante execução. O registro das ferramentas utilizadas, entradas recebidas e respostas geradas facilita identificação de problemas e revisão do pipeline implementado.
+Em aplicaÃ§Ãµes acadÃªmicas, logs ajudam a rastrear comportamento do sistema durante execuÃ§Ã£o. O registro das ferramentas utilizadas, entradas recebidas e respostas geradas facilita identificaÃ§Ã£o de problemas e revisÃ£o do pipeline implementado.
 
-A avaliação também pode considerar experiência do usuário, clareza das respostas, precisão conceitual e capacidade do sistema em justificar informações utilizadas durante geração textual.
+A avaliaÃ§Ã£o tambÃ©m pode considerar experiÃªncia do usuÃ¡rio, clareza das respostas, precisÃ£o conceitual e capacidade do sistema em justificar informaÃ§Ãµes utilizadas durante geraÃ§Ã£o textual.
 
-Sistemas RAG mais robustos frequentemente utilizam reranking, expansão de consulta e filtros adicionais para melhorar qualidade dos documentos recuperados. A melhoria contínua depende da análise sistemática dos erros encontrados durante utilização do sistema.
+Sistemas RAG mais robustos frequentemente utilizam reranking, expansÃ£o de consulta e filtros adicionais para melhorar qualidade dos documentos recuperados. A melhoria contÃ­nua depende da anÃ¡lise sistemÃ¡tica dos erros encontrados durante utilizaÃ§Ã£o do sistema.

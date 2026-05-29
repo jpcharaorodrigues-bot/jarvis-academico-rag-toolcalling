@@ -8,7 +8,7 @@ def gerar_pergunta_recall(tema: str):
     messages = [
         {
             "role": "system",
-            "content": "Gerar uma pergunta curta de revisão ativa com base no material."
+            "content": "Gerar uma pergunta curta de revisao ativa com base no material."
         },
         {
             "role": "user",
@@ -30,7 +30,7 @@ def avaliar_resposta(tema: str, pergunta: str, resposta_usuario: str):
     messages = [
         {
             "role": "system",
-            "content": "Avaliar resposta do estudante com base no material. Classificar como correta, parcial ou incorreta."
+            "content": "Avaliar resposta do estudante. Classificar como correta, parcial ou incorreta."
         },
         {
             "role": "user",

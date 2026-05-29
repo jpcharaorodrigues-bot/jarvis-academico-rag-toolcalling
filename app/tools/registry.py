@@ -25,22 +25,22 @@ TOOLS = {
 TOOL_DESCRIPTIONS = [
     {
         "name": "consultar_agenda",
-        "description": "Consultar eventos acadêmicos por período.",
+        "description": "Consultar eventos academicos por periodo.",
         "parameters": {"periodo": "hoje, amanha ou semana"}
     },
     {
         "name": "listar_tarefas",
-        "description": "Listar tarefas acadêmicas.",
+        "description": "Listar tarefas academicas.",
         "parameters": {"apenas_pendentes": "true ou false"}
     },
     {
         "name": "adicionar_tarefa",
-        "description": "Adicionar tarefa acadêmica.",
+        "description": "Adicionar tarefa academica.",
         "parameters": {"descricao": "texto da tarefa", "prazo": "data opcional"}
     },
     {
         "name": "concluir_tarefa",
-        "description": "Marcar tarefa como concluída.",
+        "description": "Marcar tarefa como concluida.",
         "parameters": {"task_id": "identificador da tarefa"}
     },
     {
@@ -50,17 +50,17 @@ TOOL_DESCRIPTIONS = [
     },
     {
         "name": "planejar_estudos",
-        "description": "Gerar plano de estudos acadêmico.",
+        "description": "Gerar plano de estudos academico.",
         "parameters": {"objetivo": "objetivo do estudo"}
     },
     {
         "name": "gerar_exercicios",
-        "description": "Gerar exercícios sobre um tema.",
-        "parameters": {"tema": "tema de estudo", "quantidade": "número de exercícios"}
+        "description": "Gerar exercicios sobre um tema.",
+        "parameters": {"tema": "tema de estudo", "quantidade": "numero de exercicios"}
     },
     {
         "name": "gerar_pergunta_recall",
-        "description": "Gerar pergunta de revisão ativa.",
+        "description": "Gerar pergunta de revisao ativa.",
         "parameters": {"tema": "tema de estudo"}
     },
     {
@@ -75,7 +75,7 @@ TOOL_DESCRIPTIONS = [
     {
         "name": "registrar_dificuldade",
         "description": "Registrar dificuldade identificada.",
-        "parameters": {"tema": "tema", "avaliacao": "avaliação da dificuldade"}
+        "parameters": {"tema": "tema", "avaliacao": "avaliacao da dificuldade"}
     },
     {
         "name": "listar_dificuldades",

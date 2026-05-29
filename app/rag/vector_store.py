@@ -29,7 +29,7 @@ class VectorStore:
 
     def search(self, query_embedding: np.ndarray, top_k: int = 5) -> List[Tuple[Dict[str, str], float]]:
         if not self.index_path.exists() or not self.metadata_path.exists():
-            raise FileNotFoundError("Índice vetorial não encontrado.")
+            raise FileNotFoundError("indice vetorial nao encontrado.")
 
         index = faiss.read_index(str(self.index_path))
 

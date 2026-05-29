@@ -1,19 +1,19 @@
-Tool calling é uma técnica utilizada para permitir que modelos de linguagem utilizem ferramentas externas durante a execução de uma tarefa. Em vez de apenas gerar texto diretamente, a LLM pode decidir consultar funções específicas responsáveis por recuperar informações, executar operações ou acessar recursos adicionais do sistema.
+Tool calling Ã© uma tÃ©cnica utilizada para permitir que modelos de linguagem utilizem ferramentas externas durante a execuÃ§Ã£o de uma tarefa. Em vez de apenas gerar texto diretamente, a LLM pode decidir consultar funÃ§Ãµes especÃ­ficas responsÃ¡veis por recuperar informaÃ§Ãµes, executar operaÃ§Ãµes ou acessar recursos adicionais do sistema.
 
-Em aplicações acadêmicas, tool calling pode ser utilizado para consultar agenda, listar tarefas, recuperar materiais de estudo ou gerar planos de aprendizagem. O modelo recebe descrições das ferramentas disponíveis e decide qual delas utilizar de acordo com a solicitação do usuário.
+Em aplicaÃ§Ãµes acadÃªmicas, tool calling pode ser utilizado para consultar agenda, listar tarefas, recuperar materiais de estudo ou gerar planos de aprendizagem. O modelo recebe descriÃ§Ãµes das ferramentas disponÃ­veis e decide qual delas utilizar de acordo com a solicitaÃ§Ã£o do usuÃ¡rio.
 
-A implementação normalmente envolve um registro de ferramentas contendo nome, descrição e parâmetros esperados. Durante a interação, a LLM analisa a solicitação recebida e retorna qual ferramenta deve ser chamada juntamente com os argumentos necessários para execução.
+A implementaÃ§Ã£o normalmente envolve um registro de ferramentas contendo nome, descriÃ§Ã£o e parÃ¢metros esperados. Durante a interaÃ§Ã£o, a LLM analisa a solicitaÃ§Ã£o recebida e retorna qual ferramenta deve ser chamada juntamente com os argumentos necessÃ¡rios para execuÃ§Ã£o.
 
-Diferente de abordagens baseadas em regras fixas, tool calling permite maior flexibilidade semântica. O modelo consegue interpretar diferentes formas de solicitação sem depender de palavras-chave exatas. Isso melhora a naturalidade da interação e reduz dependência de lógica manual excessiva.
+Diferente de abordagens baseadas em regras fixas, tool calling permite maior flexibilidade semÃ¢ntica. O modelo consegue interpretar diferentes formas de solicitaÃ§Ã£o sem depender de palavras-chave exatas. Isso melhora a naturalidade da interaÃ§Ã£o e reduz dependÃªncia de lÃ³gica manual excessiva.
 
-Em muitos sistemas, a decisão da ferramenta é retornada em formato estruturado, como JSON. Após a execução da função escolhida, o resultado pode ser enviado novamente para a LLM, permitindo geração de uma resposta final contextualizada.
+Em muitos sistemas, a decisÃ£o da ferramenta Ã© retornada em formato estruturado, como JSON. ApÃ³s a execuÃ§Ã£o da funÃ§Ã£o escolhida, o resultado pode ser enviado novamente para a LLM, permitindo geraÃ§Ã£o de uma resposta final contextualizada.
 
-Sistemas com tool calling normalmente possuem um componente de orquestração responsável por controlar o fluxo entre usuário, modelo de linguagem e ferramentas disponíveis. Esse componente também pode registrar logs das chamadas realizadas, entradas recebidas e saídas produzidas durante a execução.
+Sistemas com tool calling normalmente possuem um componente de orquestraÃ§Ã£o responsÃ¡vel por controlar o fluxo entre usuÃ¡rio, modelo de linguagem e ferramentas disponÃ­veis. Esse componente tambÃ©m pode registrar logs das chamadas realizadas, entradas recebidas e saÃ­das produzidas durante a execuÃ§Ã£o.
 
-O uso de logs é importante para rastreabilidade e análise de comportamento do sistema. Em aplicações acadêmicas, isso permite avaliar quais ferramentas foram utilizadas, identificar erros de recuperação e analisar falhas de interpretação realizadas pela LLM.
+O uso de logs Ã© importante para rastreabilidade e anÃ¡lise de comportamento do sistema. Em aplicaÃ§Ãµes acadÃªmicas, isso permite avaliar quais ferramentas foram utilizadas, identificar erros de recuperaÃ§Ã£o e analisar falhas de interpretaÃ§Ã£o realizadas pela LLM.
 
-Tool calling pode ser combinado com sistemas RAG. Nesse cenário, a LLM decide quando recuperar materiais acadêmicos, consultar documentos específicos ou utilizar informações previamente indexadas. Essa integração melhora qualidade das respostas e reduz dependência exclusiva do conhecimento interno do modelo.
+Tool calling pode ser combinado com sistemas RAG. Nesse cenÃ¡rio, a LLM decide quando recuperar materiais acadÃªmicos, consultar documentos especÃ­ficos ou utilizar informaÃ§Ãµes previamente indexadas. Essa integraÃ§Ã£o melhora qualidade das respostas e reduz dependÃªncia exclusiva do conhecimento interno do modelo.
 
-Apesar das vantagens, tool calling também apresenta desafios. A LLM pode selecionar ferramentas inadequadas, gerar parâmetros incorretos ou interpretar ambiguamente a solicitação do usuário. Por esse motivo, validação de parâmetros e tratamento de erros são etapas importantes da implementação.
+Apesar das vantagens, tool calling tambÃ©m apresenta desafios. A LLM pode selecionar ferramentas inadequadas, gerar parÃ¢metros incorretos ou interpretar ambiguamente a solicitaÃ§Ã£o do usuÃ¡rio. Por esse motivo, validaÃ§Ã£o de parÃ¢metros e tratamento de erros sÃ£o etapas importantes da implementaÃ§Ã£o.
 
-Em sistemas mais avançados, múltiplas ferramentas podem ser utilizadas em sequência para resolver tarefas compostas. Isso permite combinar recuperação de informação, planejamento, memória e geração de conteúdo em um único fluxo conversacional.
+Em sistemas mais avanÃ§ados, mÃºltiplas ferramentas podem ser utilizadas em sequÃªncia para resolver tarefas compostas. Isso permite combinar recuperaÃ§Ã£o de informaÃ§Ã£o, planejamento, memÃ³ria e geraÃ§Ã£o de conteÃºdo em um Ãºnico fluxo conversacional.

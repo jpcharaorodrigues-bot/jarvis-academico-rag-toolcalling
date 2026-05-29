@@ -3,14 +3,14 @@
     "data": "2026-05-25",
     "hora": "19:00",
     "tipo": "aula",
-    "titulo": "Inteligência Artificial",
-    "descricao": "Aula prática sobre RAG e tool calling"
+    "titulo": "Inteligencia Artificial",
+    "descricao": "Aula pratica sobre RAG e tool calling"
   },
   {
     "data": "2026-05-26",
     "hora": "20:30",
     "tipo": "atividade",
-    "titulo": "Projeto Jarvis Acadêmico",
-    "descricao": "Implementar funcionalidades obrigatórias do Trabalho 1"
+    "titulo": "Projeto Jarvis Academico",
+    "descricao": "Implementar funcionalidades obrigatorias do Trabalho 1"
   }
 ]

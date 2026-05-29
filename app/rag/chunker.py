@@ -4,10 +4,10 @@ from typing import Dict, List
 class TextChunker:
     def __init__(self, chunk_size: int = 500, overlap: int = 50):
         if chunk_size <= 0:
-            raise ValueError("chunk_size inválido.")
+            raise ValueError("chunk_size invalido.")
 
         if overlap < 0:
-            raise ValueError("overlap inválido.")
+            raise ValueError("overlap invalido.")
 
         if overlap >= chunk_size:
             raise ValueError("overlap maior que chunk_size.")

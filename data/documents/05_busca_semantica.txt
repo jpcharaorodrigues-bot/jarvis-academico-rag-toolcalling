@@ -1,19 +1,19 @@
-Busca semântica é uma abordagem de recuperação de informação baseada no significado contextual do texto. Diferentemente de sistemas tradicionais que dependem principalmente de correspondência exata de palavras, a busca semântica utiliza representações vetoriais para identificar relações conceituais entre perguntas e documentos.
+Busca semÃ¢ntica Ã© uma abordagem de recuperaÃ§Ã£o de informaÃ§Ã£o baseada no significado contextual do texto. Diferentemente de sistemas tradicionais que dependem principalmente de correspondÃªncia exata de palavras, a busca semÃ¢ntica utiliza representaÃ§Ãµes vetoriais para identificar relaÃ§Ãµes conceituais entre perguntas e documentos.
 
-Em sistemas tradicionais de busca textual, a recuperação normalmente ocorre por frequência de termos ou ocorrência literal de palavras-chave. Esse modelo pode apresentar limitações quando diferentes palavras possuem significado semelhante ou quando o usuário utiliza expressões diferentes das presentes nos documentos indexados.
+Em sistemas tradicionais de busca textual, a recuperaÃ§Ã£o normalmente ocorre por frequÃªncia de termos ou ocorrÃªncia literal de palavras-chave. Esse modelo pode apresentar limitaÃ§Ãµes quando diferentes palavras possuem significado semelhante ou quando o usuÃ¡rio utiliza expressÃµes diferentes das presentes nos documentos indexados.
 
-A busca semântica utiliza embeddings para representar perguntas e documentos em espaço vetorial. Cada texto é convertido em um vetor numérico capaz de preservar relações semânticas relevantes. Vetores próximos indicam maior similaridade contextual entre conteúdos distintos.
+A busca semÃ¢ntica utiliza embeddings para representar perguntas e documentos em espaÃ§o vetorial. Cada texto Ã© convertido em um vetor numÃ©rico capaz de preservar relaÃ§Ãµes semÃ¢nticas relevantes. Vetores prÃ³ximos indicam maior similaridade contextual entre conteÃºdos distintos.
 
-Durante uma consulta, a pergunta do usuário é convertida em embedding e comparada com os vetores armazenados dos documentos disponíveis. O sistema calcula métricas de similaridade para identificar quais trechos possuem maior relação semântica com a solicitação realizada.
+Durante uma consulta, a pergunta do usuÃ¡rio Ã© convertida em embedding e comparada com os vetores armazenados dos documentos disponÃ­veis. O sistema calcula mÃ©tricas de similaridade para identificar quais trechos possuem maior relaÃ§Ã£o semÃ¢ntica com a solicitaÃ§Ã£o realizada.
 
-Essa abordagem é amplamente utilizada em sistemas RAG. Em vez de recuperar documentos apenas por palavras exatas, o sistema consegue localizar conteúdos relacionados conceitualmente ao tema da pergunta. Isso melhora relevância das respostas geradas pela LLM.
+Essa abordagem Ã© amplamente utilizada em sistemas RAG. Em vez de recuperar documentos apenas por palavras exatas, o sistema consegue localizar conteÃºdos relacionados conceitualmente ao tema da pergunta. Isso melhora relevÃ¢ncia das respostas geradas pela LLM.
 
-A qualidade da busca semântica depende diretamente dos embeddings utilizados. Modelos inadequados podem gerar representações pouco precisas e recuperar documentos irrelevantes. O tamanho dos chunks também influencia desempenho da recuperação vetorial.
+A qualidade da busca semÃ¢ntica depende diretamente dos embeddings utilizados. Modelos inadequados podem gerar representaÃ§Ãµes pouco precisas e recuperar documentos irrelevantes. O tamanho dos chunks tambÃ©m influencia desempenho da recuperaÃ§Ã£o vetorial.
 
-Sistemas modernos frequentemente utilizam índices vetoriais especializados para acelerar consultas semânticas. Bibliotecas como FAISS permitem armazenar embeddings e realizar buscas eficientes em grandes volumes de dados.
+Sistemas modernos frequentemente utilizam Ã­ndices vetoriais especializados para acelerar consultas semÃ¢nticas. Bibliotecas como FAISS permitem armazenar embeddings e realizar buscas eficientes em grandes volumes de dados.
 
-Busca semântica possui aplicações em recuperação de documentos acadêmicos, recomendação de conteúdo, sistemas jurídicos, atendimento automatizado e organização de bases textuais extensas. Em ambientes educacionais, auxilia estudantes na localização contextual de conceitos e materiais relacionados.
+Busca semÃ¢ntica possui aplicaÃ§Ãµes em recuperaÃ§Ã£o de documentos acadÃªmicos, recomendaÃ§Ã£o de conteÃºdo, sistemas jurÃ­dicos, atendimento automatizado e organizaÃ§Ã£o de bases textuais extensas. Em ambientes educacionais, auxilia estudantes na localizaÃ§Ã£o contextual de conceitos e materiais relacionados.
 
-Apesar das vantagens, busca semântica não elimina completamente ambiguidades. Perguntas muito genéricas, contexto insuficiente ou embeddings inadequados ainda podem produzir recuperação incorreta. Por esse motivo, avaliação contínua e análise de erros são importantes em sistemas baseados em recuperação vetorial.
+Apesar das vantagens, busca semÃ¢ntica nÃ£o elimina completamente ambiguidades. Perguntas muito genÃ©ricas, contexto insuficiente ou embeddings inadequados ainda podem produzir recuperaÃ§Ã£o incorreta. Por esse motivo, avaliaÃ§Ã£o contÃ­nua e anÃ¡lise de erros sÃ£o importantes em sistemas baseados em recuperaÃ§Ã£o vetorial.
 
-A avaliação da busca semântica normalmente considera relevância dos documentos recuperados, precisão contextual, coerência semântica e capacidade do sistema em localizar informações úteis para responder perguntas específicas.
+A avaliaÃ§Ã£o da busca semÃ¢ntica normalmente considera relevÃ¢ncia dos documentos recuperados, precisÃ£o contextual, coerÃªncia semÃ¢ntica e capacidade do sistema em localizar informaÃ§Ãµes Ãºteis para responder perguntas especÃ­ficas.

@@ -2,16 +2,16 @@ from app.orchestrator import Orchestrator
 
 
 def main():
-    print("JARVIS Acadêmico iniciado.")
+    print("JARVIS Academico iniciado.")
     print("Digite 'sair' para encerrar.\n")
 
     orchestrator = Orchestrator()
 
     while True:
-        pergunta = input("Você: ").strip()
+        pergunta = input("Voce: ").strip()
 
         if pergunta.lower() in ["sair", "exit", "quit"]:
-            print("Encerrando o JARVIS Acadêmico.")
+            print("Encerrando o JARVIS Academico.")
             break
 
         resposta = orchestrator.handle(pergunta)

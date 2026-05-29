@@ -14,7 +14,7 @@ def planejar_estudos(objetivo: str):
         {
             "role": "system",
             "content": (
-                "Gerar plano de estudos acadêmico objetivo. "
+                "Gerar plano de estudos academico objetivo. "
                 "Considerar agenda, tarefas e materiais."
             )
         },
