@@ -1,114 +1,164 @@
 # RELATORIO TECNICO - JARVIS ACADEMICO
 
-## 1. Introducao
+# 1. Introducao
 
-O projeto JARVIS Academico implementa um assistente academico baseado em Retrieval-Augmented Generation (RAG), embeddings vetoriais e tool calling utilizando Large Language Models.
+O projeto JARVIS Academico implementa um assistente inteligente para apoio ao estudante utilizando tecnicas modernas de Inteligencia Artificial.
 
-O objetivo principal foi desenvolver um sistema capaz de recuperar materiais de estudo, responder perguntas contextualizadas, auxiliar organizacao academica e apoiar revisao ativa de conteudos.
+O sistema integra:
 
-O sistema integra recuperacao semantica, gerenciamento de tarefas, agenda academica, planejamento de estudos e funcionalidades voltadas ao aprendizado.
+* Retrieval-Augmented Generation (RAG);
+* recuperacao semantica;
+* embeddings vetoriais;
+* tool calling;
+* planejamento de estudos;
+* funcionalidades de aprendizagem;
+* Large Language Models (LLMs).
+
+O objetivo principal foi desenvolver um sistema capaz de auxiliar o estudante na organizacao academica, revisao de conteudos e planejamento de estudos.
 
 ---
 
-# 2. Objetivos do projeto
+# 2. Objetivos do Projeto
 
 Os principais objetivos do sistema foram:
 
-- implementar pipeline RAG completo;
-- utilizar embeddings vetoriais;
-- aplicar recuperacao semantica;
-- integrar tool calling com LLM;
-- criar ferramentas academicas;
-- desenvolver planejamento de estudos;
-- implementar active recall;
-- registrar logs de execucao;
-- organizar arquitetura modular.
+* implementar um pipeline RAG completo;
+* utilizar embeddings vetoriais;
+* implementar busca semantica;
+* integrar uma LLM ao sistema;
+* implementar tool calling;
+* desenvolver funcionalidades academicas;
+* apoiar o processo de aprendizagem;
+* gerar planejamento de estudos;
+* registrar logs;
+* organizar o software em arquitetura modular.
 
 ---
 
-# 3. Arquitetura do sistema
+# 3. Arquitetura do Sistema
 
-O sistema foi dividido em modulos independentes para facilitar manutencao, expansao e organizacao do codigo.
+O sistema foi organizado em modulos independentes.
 
 ## Estrutura principal
 
 ```text
 app/
 ├── rag/
-├── tools/
 ├── learning/
+├── tools/
 ├── utils/
-├── main.py
+├── config.py
+├── llm_client.py
 ├── orchestrator.py
+├── build_index.py
+└── main.py
 
 data/
 ├── documents/
 ├── agenda.json
 ├── tasks.json
-├── vector_store/
+├── logs.jsonl
+├── difficulties.json
+└── vector_store/
 
 tests/
+
+README.md
+RELATORIO.md
+AVALIACAO.md
 ```
-
-## Modulos implementados
-
-### RAG
-Responsavel por:
-- carregamento documental;
-- chunking;
-- embeddings;
-- indexacao vetorial;
-- recuperacao semantica.
-
-### Tool calling
-Responsavel por:
-- selecao automatica de ferramentas;
-- execucao de funcoes;
-- orquestracao entre LLM e sistema interno.
-
-### Learning
-Responsavel por:
-- active recall;
-- avaliacao de respostas;
-- deteccao de dificuldades;
-- geracao de exercicios.
-
-### Agenda e tarefas
-Responsavel por:
-- gerenciamento academico;
-- consulta de agenda;
-- planejamento de estudos.
 
 ---
 
-# 4. Implementacao do RAG
+# 4. Modulos Implementados
 
-O sistema implementa um pipeline RAG completo.
+## RAG
 
-## Fluxo de funcionamento
+Responsavel por:
 
-1. carregar documentos;
-2. dividir documentos em chunks;
-3. gerar embeddings vetoriais;
-4. armazenar embeddings em indice FAISS;
-5. recuperar trechos relevantes;
-6. gerar resposta contextualizada utilizando LLM.
+* carregamento dos documentos;
+* chunking;
+* geracao de embeddings;
+* indexacao vetorial;
+* recuperacao semantica.
+
+---
+
+## Tool Calling
+
+Responsavel por:
+
+* selecao automatica de ferramentas;
+* interpretacao da resposta da LLM;
+* execucao das ferramentas;
+* geracao da resposta final.
+
+---
+
+## Learning
+
+Responsavel por:
+
+* Active Recall;
+* avaliacao de respostas;
+* geracao de exercicios;
+* identificacao de dificuldades.
+
+---
+
+## Agenda e Tarefas
+
+Responsavel por:
+
+* agenda academica;
+* gerenciamento de tarefas;
+* planejamento de estudos.
+
+---
+
+# 5. Implementacao do RAG
+
+O sistema implementa o seguinte fluxo:
+
+```text
+Documentos
+↓
+Chunking
+↓
+Embeddings
+↓
+FAISS
+↓
+Recuperacao
+↓
+LLM
+↓
+Resposta
+```
+
+O pipeline permite recuperar trechos semanticamente relevantes antes da geracao da resposta.
+
+---
 
 ## Embeddings
 
-Os embeddings foram gerados utilizando Sentence Transformers.
+Foram utilizados modelos Sentence Transformers para representacao vetorial dos documentos.
 
-Os vetores representam semanticamente os documentos e permitem comparacao contextual entre perguntas e materiais armazenados.
+Os embeddings permitem comparar semanticamente perguntas e documentos.
 
-## Busca semantica
+---
 
-A recuperacao utiliza similaridade vetorial para localizar os chunks semanticamente mais proximos da pergunta realizada pelo usuario.
+## Recuperacao Semantica
 
-## FAISS
+A busca utiliza similaridade vetorial para recuperar os chunks mais relevantes.
 
-O armazenamento vetorial foi realizado utilizando FAISS.
+---
 
-Arquivos gerados:
+## Indexacao Vetorial
+
+A indexacao foi realizada utilizando FAISS.
+
+Arquivos produzidos:
 
 ```text
 data/vector_store/index.faiss
@@ -117,170 +167,193 @@ data/vector_store/metadata.json
 
 ---
 
-# 5. Tool Calling
+# 6. Integracao com LLM
 
-O sistema utiliza tool calling para permitir que a LLM selecione ferramentas automaticamente.
+O sistema utiliza a API disponibilizada pela infraestrutura da disciplina.
 
-A decisao da ferramenta ocorre em formato JSON.
+Configuracao:
 
-Exemplo:
+* OpenAI SDK;
+* endpoint compativel com API OpenAI;
+* modelo disponibilizado pela disciplina.
 
-```json
-{
-  "tool": "buscar_material_rag",
-  "arguments": {
-    "pergunta": "O que e RAG?"
-  }
-}
-```
+A LLM e utilizada para:
 
-O orquestrador interpreta a resposta da LLM, executa a ferramenta correspondente e gera resposta final contextualizada.
-
-## Ferramentas implementadas
-
-- consultar_agenda
-- listar_tarefas
-- adicionar_tarefa
-- concluir_tarefa
-- buscar_material_rag
-- planejar_estudos
-- gerar_exercicios
-- gerar_pergunta_recall
-- avaliar_resposta
-- registrar_dificuldade
-- listar_dificuldades
+* decidir ferramentas;
+* gerar respostas;
+* produzir exercicios;
+* avaliar respostas;
+* gerar planejamento de estudos.
 
 ---
 
-# 6. Dataset
+# 7. Tool Calling
 
-O dataset utilizado esta localizado em:
+O sistema implementa tool calling baseado em LLM.
+
+Ferramentas implementadas:
+
+* consultar_agenda
+* listar_tarefas
+* adicionar_tarefa
+* concluir_tarefa
+* buscar_material_rag
+* planejar_estudos
+* gerar_exercicios
+* gerar_pergunta_recall
+* avaliar_resposta
+* registrar_dificuldade
+* listar_dificuldades
+
+A decisao da ferramenta ocorre automaticamente.
+
+---
+
+# 8. Dataset
+
+O dataset foi construido especificamente para o projeto.
+
+Localizacao:
 
 ```text
 data/documents
 ```
 
-Foram criados 10 documentos academicos relacionados a:
+Quantidade:
 
-- RAG;
-- embeddings;
-- transformers;
-- busca semantica;
-- chunking;
-- modelos de linguagem;
-- tool calling;
-- active recall;
-- avaliacao de RAG;
-- planejamento de estudos.
+* 10 documentos academicos.
 
-Os documentos foram utilizados para testes de recuperacao semantica e geracao contextual.
+Temas:
 
-## Chunking
-
-Os documentos sao divididos em chunks menores antes da indexacao vetorial.
-
-O chunking reduz excesso de contexto irrelevante e melhora qualidade da recuperacao.
+* RAG;
+* embeddings;
+* transformers;
+* busca semantica;
+* chunking;
+* tool calling;
+* modelos de linguagem;
+* active recall;
+* avaliacao de sistemas RAG;
+* planejamento de estudos.
 
 ---
 
-# 7. Funcionalidades implementadas
+## Estrategia de Chunking
 
-## Recuperacao semantica
+Os documentos sao divididos em chunks menores antes da geracao dos embeddings.
 
-O sistema responde perguntas utilizando materiais indexados no RAG.
+Objetivos:
 
-Teste realizado:
+* preservar contexto;
+* melhorar recuperacao;
+* reduzir ruido.
+
+---
+
+## Impacto do Chunking
+
+Chunks pequenos podem perder contexto.
+
+Chunks muito grandes podem reduzir a precisao.
+
+A estrategia adotada busca equilibrio entre contexto e relevancia.
+
+---
+
+# 9. Funcionalidades Implementadas
+
+## Recuperacao Semantica
+
+Exemplo:
 
 ```text
 Explique o que e RAG
 ```
 
-Resultado:
-- recuperacao correta de contexto;
-- resposta contextualizada.
+---
 
-## Agenda academica
+## Agenda Academica
 
-A agenda academica e armazenada em JSON.
-
-Arquivo:
+Exemplo:
 
 ```text
-data/agenda.json
+O que tenho hoje?
 ```
 
-## Gerenciamento de tarefas
+---
 
-As tarefas sao armazenadas em:
+## Tarefas
 
-```text
-data/tasks.json
-```
-
-Teste realizado:
+Exemplo:
 
 ```text
 Liste minhas tarefas
 ```
 
-Resultado:
-- listagem correta das tarefas pendentes.
+---
 
-## Planejamento de estudos
+## Planejamento de Estudos
 
-Teste realizado:
+Exemplo:
 
 ```text
 Planeje meus estudos sobre transformers
 ```
 
-Resultado:
-- plano de estudos contextualizado;
-- utilizacao de materiais recuperados;
-- integracao com agenda e tarefas.
+O sistema combina:
+
+* agenda;
+* tarefas;
+* materiais recuperados.
+
+---
 
 ## Active Recall
 
-Teste realizado:
+Exemplo:
 
 ```text
 Gere uma pergunta sobre embeddings
 ```
 
-Resultado:
-- geracao automatica de pergunta de revisao ativa.
+---
+
+## Geracao de Exercicios
+
+Exemplo:
+
+```text
+Gere exercicios sobre tool calling
+```
 
 ---
 
-# 8. Logs
+# 10. Logs
 
-O sistema registra logs de execucao em:
+Os logs sao armazenados em:
 
 ```text
 data/logs.jsonl
 ```
 
-Os logs armazenam:
-- ferramenta utilizada;
-- entrada recebida;
-- resposta produzida;
-- horario de execucao.
+Os registros armazenam:
+
+* ferramenta;
+* entrada;
+* saida;
+* horario.
 
 ---
 
-# 9. Testes realizados
+# 11. Testes
 
-Foram realizados testes de:
+Foram implementados testes basicos para:
 
-- recuperacao RAG;
-- chunking;
-- tarefas;
-- agenda;
-- tool calling;
-- planejamento;
-- active recall.
+* agenda;
+* chunking;
+* tarefas.
 
-Arquivos de teste:
+Arquivos:
 
 ```text
 tests/test_agenda.py
@@ -290,109 +363,93 @@ tests/test_tasks.py
 
 ---
 
-# 10. Analise de erros
+# 12. Analise de Erros
 
-Durante o desenvolvimento ocorreram diferentes problemas tecnicos.
-
-## Erro de encoding UTF-8
-
-Alguns arquivos continham caracteres invalidos no Windows.
+## Erro de Encoding
 
 Problema:
-- caracteres acentuados quebravam arquivos Python.
+
+* caracteres invalidos.
 
 Solucao:
-- remover acentos de arquivos `.py`;
-- utilizar UTF-8 corretamente em `.txt` e `.md`.
 
-## Erros de importacao
+* padronizacao UTF-8.
 
-Ocorreram erros de importacao entre modulos.
+---
+
+## Erros de Importacao
 
 Problema:
-- imports apontavam para caminhos incorretos.
+
+* imports incorretos.
 
 Solucao:
-- reorganizacao dos imports;
-- padronizacao da estrutura modular.
 
-## Erros no tool calling
+* reorganizacao modular.
 
-Inicialmente o sistema retornava apenas JSON bruto.
+---
+
+## Erros no Tool Calling
 
 Problema:
-- o orchestrator nao executava corretamente as ferramentas.
+
+* JSON nao era interpretado.
 
 Solucao:
-- tratamento adequado do JSON;
-- execucao automatica das funcoes selecionadas.
+
+* implementacao do orchestrator.
 
 ---
 
-# 11. Limitacoes
+## Timeout da Infraestrutura
 
-O sistema possui algumas limitacoes.
+Problema:
 
-## Dataset sintetico
+* indisponibilidade temporaria da API.
 
-Os documentos foram criados especificamente para validacao inicial do sistema.
+Solucao:
 
-## Base documental pequena
-
-O numero de documentos ainda e reduzido para cenarios reais.
-
-## Sem memoria conversacional
-
-O sistema nao possui memoria persistente entre conversas.
-
-## Sem reranking
-
-Nao foi implementado reranking adicional de documentos recuperados.
+* aumento do timeout e repeticao das requisicoes.
 
 ---
 
-# 12. Melhorias futuras
+# 13. Limitacoes
 
-Melhorias futuras incluem:
-
-- ampliacao do dataset;
-- uso de PDFs reais;
-- memoria conversacional;
-- reranking;
-- interface grafica;
-- testes automatizados mais avancados;
-- persistencia de usuarios;
-- dashboards de acompanhamento academico.
+* dataset reduzido;
+* ausencia de memoria conversacional;
+* ausencia de reranking;
+* dependencia da infraestrutura externa;
+* ausencia de interface grafica.
 
 ---
 
-# 13. Ferramentas utilizadas
+# 14. Ferramentas Utilizadas
 
-Durante o desenvolvimento foram utilizadas:
-
-- Python;
-- FAISS;
-- Sentence Transformers;
-- OpenAI SDK;
-- Gemma 3;
-- VSCode;
-- GitHub;
-- ChatGPT.
+* Python;
+* FAISS;
+* Sentence Transformers;
+* OpenAI SDK;
+* VS Code;
+* GitHub;
+* ChatGPT.
 
 ---
 
-# 14. Conclusao
+# 15. Conclusao
 
-O projeto implementou um assistente academico funcional baseado em RAG e tool calling.
+O projeto implementou um assistente academico baseado em RAG, tool calling e integracao com LLM.
 
 O sistema demonstrou:
-- recuperacao semantica;
-- integracao com embeddings;
-- indexacao vetorial;
-- planejamento academico;
-- active recall;
-- gerenciamento de tarefas;
-- logs de execucao;
-- arquitetura modular.
 
-A implementacao permite expansao futura para novos recursos relacionados a apoio academico baseado em inteligencia artificial.
+* recuperacao semantica;
+* embeddings vetoriais;
+* indexacao FAISS;
+* planejamento de estudos;
+* active recall;
+* geracao de exercicios;
+* identificacao de dificuldades;
+* logs;
+* arquitetura modular;
+* tratamento de erros.
+
+Os resultados obtidos demonstraram atendimento aos requisitos estabelecidos pelas diretrizes da disciplina e permitiram a construcao de um sistema academico inteligente voltado ao apoio ao estudante.

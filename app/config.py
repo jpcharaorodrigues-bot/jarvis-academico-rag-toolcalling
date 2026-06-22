@@ -5,8 +5,8 @@ load_dotenv()
 
 
 class Config:
-    MODEL_NAME = "google/gemma-3-12b-it"
-    BASE_URL = "https://llm.liaufms.org/v1/gemma-3-12b-it"
+    MODEL_NAME = "Qwen/Qwen2.5-14B-Instruct-AWQ"
+    BASE_URL = "https://llm.liaufms.org/v1/qwen2-5-14b-instruct-awq"
     API_KEY = os.getenv("GEMMA_API_KEY")
 
     DATA_PATH = "data"

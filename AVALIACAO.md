@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O objetivo desta avaliacao foi verificar funcionamento do sistema RAG, tool calling, recuperacao semantica e ferramentas academicas implementadas.
+O objetivo desta avaliacao foi verificar o funcionamento do sistema RAG, tool calling, recuperacao semantica, planejamento de estudos e funcionalidades de aprendizagem implementadas no JARVIS Academico.
 
 ---
 
@@ -16,8 +16,8 @@ Explique o que e RAG
 
 ## Documentos recuperados
 
-- 01_rag.txt
-- 02_embeddings.txt
+* 01_rag.txt
+* 02_embeddings.txt
 
 ## Resposta
 
@@ -39,7 +39,7 @@ Liste minhas tarefas
 
 ## Documentos recuperados
 
-- tasks.json
+* tasks.json
 
 ## Resposta
 
@@ -61,21 +61,17 @@ Planeje meus estudos sobre transformers
 
 ## Documentos recuperados
 
-- 04_transformers.txt
-- agenda.json
-- tasks.json
+* 04_transformers.txt
+* agenda.json
+* tasks.json
 
 ## Resposta
 
-O sistema gerou plano de estudos utilizando materiais, agenda e tarefas.
+O sistema gerou um plano de estudos utilizando materiais recuperados pelo RAG, tarefas pendentes e informacoes da agenda.
 
 ## Classificacao
 
-parcialmente correta
-
-## Observacao
-
-A resposta foi adequada, mas simplificada.
+correta
 
 ---
 
@@ -89,11 +85,12 @@ Gere uma pergunta sobre embeddings
 
 ## Documentos recuperados
 
-- 02_embeddings.txt
+* 02_embeddings.txt
+* 01_rag.txt
 
 ## Resposta
 
-O sistema gerou pergunta contextualizada para revisao ativa.
+O sistema gerou uma pergunta de revisao ativa baseada no material recuperado.
 
 ## Classificacao
 
@@ -111,8 +108,8 @@ Como funciona busca semantica?
 
 ## Documentos recuperados
 
-- 05_busca_semantica.txt
-- 02_embeddings.txt
+* 05_busca_semantica.txt
+* 02_embeddings.txt
 
 ## Resposta
 
@@ -134,11 +131,11 @@ O que tenho hoje na agenda?
 
 ## Documentos recuperados
 
-- agenda.json
+* agenda.json
 
 ## Resposta
 
-O sistema retornou corretamente eventos academicos cadastrados.
+O sistema consultou corretamente os eventos cadastrados.
 
 ## Classificacao
 
@@ -156,19 +153,15 @@ Gere exercicios sobre tool calling
 
 ## Documentos recuperados
 
-- 03_tool_calling.txt
+* 03_tool_calling.txt
 
 ## Resposta
 
-O sistema gerou exercicios relacionados a tool calling.
+O sistema gerou exercicios contextualizados e apresentou respostas corretas para cada pergunta.
 
 ## Classificacao
 
-parcialmente correta
-
-## Observacao
-
-A geracao depende da disponibilidade da LLM externa.
+correta
 
 ---
 
@@ -182,11 +175,11 @@ Avalie uma resposta sobre embeddings
 
 ## Documentos recuperados
 
-- 02_embeddings.txt
+* 02_embeddings.txt
 
 ## Resposta
 
-O sistema classificou coerencia e qualidade da resposta fornecida.
+O sistema classificou coerencia e qualidade da resposta fornecida pelo estudante.
 
 ## Classificacao
 
@@ -204,11 +197,11 @@ Registrar dificuldade sobre transformers
 
 ## Documentos recuperados
 
-- difficulties.json
+* difficulties.json
 
 ## Resposta
 
-O sistema armazenou corretamente dificuldade relacionada ao tema.
+O sistema registrou corretamente a dificuldade do estudante.
 
 ## Classificacao
 
@@ -226,11 +219,11 @@ Verificar logs do sistema
 
 ## Documentos recuperados
 
-- logs.jsonl
+* logs.jsonl
 
 ## Resposta
 
-O sistema registrou corretamente execucao das ferramentas.
+O sistema registrou corretamente ferramenta, entrada e saida.
 
 ## Classificacao
 
@@ -242,16 +235,19 @@ correta
 
 O sistema apresentou funcionamento adequado para:
 
-- recuperacao semantica;
-- embeddings;
-- FAISS;
-- tool calling;
-- agenda academica;
-- gerenciamento de tarefas;
-- planejamento de estudos;
-- active recall;
-- logs;
-- recuperacao contextual.
+* recuperacao semantica;
+* embeddings;
+* indexacao vetorial;
+* FAISS;
+* tool calling;
+* agenda academica;
+* gerenciamento de tarefas;
+* planejamento de estudos;
+* active recall;
+* geracao de exercicios;
+* identificacao de dificuldades;
+* logs;
+* recuperacao contextual.
 
 A arquitetura modular permitiu organizacao adequada dos componentes.
 
@@ -307,19 +303,19 @@ tool calling/orquestracao
 
 ### Problema
 
-O sistema retornava apenas JSON sem executar ferramentas.
+A LLM retornava JSON sem executar a ferramenta.
 
 ### Causa
 
-O orchestrator nao interpretava corretamente a resposta da LLM.
+O orchestrator nao interpretava corretamente a resposta.
 
 ### Solucao
 
-Implementacao adequada do fluxo de tool calling.
+Implementacao do fluxo completo de tool calling.
 
 ---
 
-## Erro 4 - API externa 502
+## Erro 4 - Timeout da infraestrutura da LLM
 
 ### Tipo
 
@@ -327,62 +323,64 @@ infraestrutura/API externa
 
 ### Problema
 
-Servidor da LLM retornava erro 502 Bad Gateway.
+O endpoint da LLM apresentou indisponibilidade e timeout durante alguns testes.
 
 ### Causa
 
-Instabilidade do endpoint externo.
+Instabilidade da infraestrutura externa.
 
 ### Solucao
 
-Implementacao de tratamento de excecao e repeticao de tentativa.
+Aumento do timeout e repeticao das requisicoes.
 
 ---
 
-## Erro 5 - Token invalido 401
+## Erro 5 - Mudanca de endpoint da disciplina
 
 ### Tipo
 
-autenticacao/API externa
+infraestrutura/configuracao
 
 ### Problema
 
-A API rejeitou autenticacao da chave utilizada.
+O endpoint inicialmente utilizado tornou-se incompativel com a infraestrutura atual da disciplina.
 
 ### Causa
 
-Token invalido ou expirado.
+Atualizacao da LLM disponibilizada pelo professor.
 
 ### Solucao
 
-Solicitar novo token valido da infraestrutura da disciplina.
+Atualizacao do endpoint e da configuracao do sistema.
 
 ---
 
 # Limitacoes observadas
 
-- dataset pequeno;
-- ausencia de memoria conversacional;
-- ausencia de reranking;
-- dependencia de API externa;
-- base documental sintetica.
+* dataset reduzido;
+* ausencia de memoria conversacional;
+* ausencia de reranking;
+* dependencia de infraestrutura externa;
+* base documental sintetica.
 
 ---
 
 # Conclusao
 
-O projeto implementou um assistente academico baseado em RAG e tool calling utilizando Gemma 12B.
+O projeto implementou um assistente academico baseado em RAG, tool calling e integracao com LLM.
 
 O sistema demonstrou:
 
-- recuperacao semantica;
-- embeddings vetoriais;
-- indexacao FAISS;
-- planejamento academico;
-- active recall;
-- logs;
-- arquitetura modular;
-- tratamento de erros;
-- integracao com LLM externa.
+* recuperacao semantica;
+* embeddings vetoriais;
+* indexacao FAISS;
+* planejamento academico;
+* active recall;
+* geracao de exercicios;
+* identificacao de dificuldades;
+* logs;
+* arquitetura modular;
+* tratamento de erros;
+* integracao com LLM externa.
 
-Os testes realizados mostraram funcionamento adequado dos principais requisitos exigidos pelas diretrizes do trabalho.
+Os testes realizados demonstraram atendimento aos requisitos estabelecidos pelas diretrizes do trabalho.
